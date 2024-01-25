@@ -12,6 +12,11 @@ app.get('/', (req, res)=>{
     res.send("Thanks,for using my API!");
 });
 
+app.get('/hello', (req, res)=>{
+    res.status(200);
+    res.send("Hello");
+});
+
 app.listen(PORT, (error) =>{
 	if(!error)
 		console.log("Server is Successfully Running,and App is listening on port "+ PORT)
