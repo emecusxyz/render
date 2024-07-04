@@ -17,6 +17,16 @@ app.get('/hello', (req, res)=>{
     res.send("Hello");
 });
 
+app.get('/privacy', (req, res)=>{
+    res.status(200);
+    res.send("Privacy");
+});
+
+app.get('/termsofuse', (req, res)=>{
+    res.status(200);
+    res.send("Terms of Use");
+});
+
 app.listen(PORT, (error) =>{
 	if(!error)
 		console.log("Server is Successfully Running,and App is listening on port "+ PORT)
