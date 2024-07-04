@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 
 
 const app = express();
@@ -22,9 +23,9 @@ app.get('/privacy', (req, res)=>{
     res.send("Privacy");
 });
 
-app.get('/termsofuse', (req, res)=>{
-    res.status(200);
-    res.send("Terms of Use");
+
+app.get('/termsofuse', function(req, res) {
+  res.sendFile(path.join(__dirname, '/termsofuse.html'));
 });
 
 app.listen(PORT, (error) =>{
